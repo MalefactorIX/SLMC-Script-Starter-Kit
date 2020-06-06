@@ -1,3 +1,4 @@
+//For more information, visit: https://sites.google.com/site/tomeofmaliciousintent/explosives
 vector tar(key id)
 {
     return (vector)((string)llGetObjectDetails(id,[OBJECT_POS]));
