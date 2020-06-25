@@ -20,8 +20,8 @@ default
                 return;
             }
             float falloff=llVecDist(init,tcheck);
-            if(falloff<25.0)llSetDamage(100.0);
-            else llSetDamage(100.0-((dist-25.0)*0.3));//Hits 0 at like 325m
+            if(falloff<1.0)llSetDamage(100.0);
+            else llSetDamage(100.0-(dist-20.0));
             llResetTime();
             llSetStatus(STATUS_PHANTOM,0);
             while(llGetTime()<2.0)llSetRegionPos(tar(id));
