@@ -16,7 +16,7 @@ default
         llDie();
         llSetDamage(0.0);
     }
-    moving_end()
+    moving_end()//Kills bullet if it gets stuck not moving
     {
         float bvel=llVecMag(llGetVel());
         if(bvel<5.0)llDie();
