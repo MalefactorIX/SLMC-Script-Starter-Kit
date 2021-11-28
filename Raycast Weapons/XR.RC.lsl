@@ -1,4 +1,4 @@
-regionend(vector init, rotation rot)//Note, this method will not work with values in excess of 509
+regionend(vector init, rotation rot)//Note, this method may not work with values in excess of 509
 {
     vector dest=init+<500.0,0.0,0.0>*rot;//So we only add 500 here.
     vector norm=llVecNorm(dest-init);
