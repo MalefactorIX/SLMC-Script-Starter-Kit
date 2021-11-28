@@ -86,7 +86,6 @@ fire()
             }
         }
         else llOwnerSay("Hit owner");
-        if(l)i+=2;
     }
     if(pass<1)regionend(init,rot);
     else
