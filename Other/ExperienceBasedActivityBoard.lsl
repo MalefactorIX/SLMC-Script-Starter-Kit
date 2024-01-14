@@ -60,7 +60,14 @@ default
        //llCreateKeyValue(keyname,"null");//Used to create the key if it does not exist.
        llSetTimerEvent(300.0);//How often to update board
     }
-
+    touch_start(integer c)
+    {
+        if(llDetectedKey(0)!=llGetOwner())return;
+        allowboardnames=!allowboardnames;
+        if(allowboardnames)llOwnerSay("Board names enabled");
+        else llOwnerSay("Board names disabled");
+        text();
+    }
     dataserver(key id, string data)
     {
         if((integer)llGetSubString(data,0,0))
