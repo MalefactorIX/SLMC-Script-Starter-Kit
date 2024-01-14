@@ -86,6 +86,6 @@ default
     timer()
     {
         read=1;
-        llSetTimerEvent(300.0);//How often to update board
+        llReadKeyValue(keyname);
     }
 }
