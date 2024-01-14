@@ -28,7 +28,7 @@ text()//I could take the time and create a spritesheet for text and have it look
             string boardname=llGetSubString(name,break+1,-1);
             if(llStringLength(boardname)>3&&allowboardnames)name=boardname;
             else name=llGetSubString(name,0,break-1);
-            output+=name+" ["+llList2String(parse,2)+"]\n";
+            output+=name+" ["+llList2String(parse,i+2)+"]\n";
         }
         else llSay(0,"Skipping "+llList2String(parse,i+1));
         i+=4;
@@ -69,7 +69,7 @@ default
             if(read)update();
             else text();
         }
-        else 
+        else
         {
             integer error=(integer)llGetSubString(data,2,-1);
             if(error!=14)llRegionSay(DEBUG_CHANNEL,"Board Sync Failure ["+(string)read+"]: "+llToUpper(llGetExperienceErrorMessage(error)));
