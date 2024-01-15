@@ -21,7 +21,8 @@ text()//I could take the time and create a spritesheet for text and have it look
     string output;
     while(i<l)
     {
-        if(llList2String(parse,3)==llGetDate())//Only display information from boards which have updated today
+        //llSay(0,llGetDate());
+        if(llStringTrim(llList2String(parse,i+3),3)==llGetDate())//Only display information from boards which have updated today
         {
             string name=llList2String(parse,i+1);
             integer break=llSubStringIndex(name,":");
@@ -30,7 +31,7 @@ text()//I could take the time and create a spritesheet for text and have it look
             else name=llGetSubString(name,0,break-1);
             output+=name+" ["+llList2String(parse,i+2)+"]\n";
         }
-        else llSay(0,"Skipping "+llList2String(parse,i+1));
+        //else llSay(0,"Skipping "+llList2String(parse,i+1));
         i+=4;
     }
     if(output)llSetText(output,<1.0,1.0,1.0>,0.5);
